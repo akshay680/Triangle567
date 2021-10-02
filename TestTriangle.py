@@ -11,23 +11,15 @@ import unittest
 
 from Triangle import classifyTriangle
 
+
 # This code implements the unit test functionality
 # https://docs.python.org/3/library/unittest.html has a nice description of the framework
 
 class TestTriangles(unittest.TestCase):
     # define multiple sets of tests as functions with names that begin
 
-    def testRightTriangleA(self): 
-        self.assertEqual(classifyTriangle(3,4,5),'Right','3,4,5 is a Right triangle')
-
-    def testRightTriangleB(self): 
-        self.assertEqual(classifyTriangle(5,3,4),'Right','5,3,4 is a Right triangle')
-        
-    def testEquilateralTriangles(self): 
-        self.assertEqual(classifyTriangle(1,1,1),'Equilateral','1,1,1 should be equilateral')
-
     def testInvalidTriangleA(self):
-        self.assertEqual(classifyTriangle(201,2,3),'InvalidInput')
+        self.assertEqual(classifyTriangle(201, 2, 3), 'InvalidInput')
 
     def testInvalidTriangleB(self):
         self.assertEqual(classifyTriangle(1, 202, 3), 'InvalidInput')
@@ -42,7 +34,7 @@ class TestTriangles(unittest.TestCase):
         self.assertEqual(classifyTriangle(201, 202, 3), 'InvalidInput')
 
     def testInvalidTriangleF(self):
-        self.assertEqual(classifyTriangle(2,201,203),'InvalidInput')
+        self.assertEqual(classifyTriangle(2, 201, 203), 'InvalidInput')
 
     def testInvalidTriangleG(self):
         self.assertEqual(classifyTriangle(0, 1, 2), 'InvalidInput')
@@ -91,43 +83,6 @@ class TestTriangles(unittest.TestCase):
 
     def testInvalidTriangleV(self):
         self.assertEqual(classifyTriangle(1, 2.02, 'c'), 'InvalidInput')
-
-    def testScaleneTriangleA(self):
-        self.assertEqual(classifyTriangle(5, 5, 4), 'Isosceles', '5,5,4 is a Isosceles triangle')
-
-    def testScaleneTriangleB(self):
-        self.assertEqual(classifyTriangle(7, 12, 15), 'Scalene', '7,12,15 is a Scalene triangle')
-
-    def testScaleneTriangleC(self):
-        self.assertEqual(classifyTriangle(4, 3, 5), 'Scalene', '4,3,5 is a Scalene triangle')
-
-    def testScaleneTriangleD(self):
-        self.assertEqual(classifyTriangle(15, 32, 34), 'Scalene', '15,32,34 is a Scalene triangle')
-
-    def testIsoscelesTriangleA(self):
-        self.assertEqual(classifyTriangle(4, 4, 3), 'Isosceles', '4,4,3 is a Isosceles triangle')
-
-    def testIsoscelesTriangleB(self):
-        self.assertEqual(classifyTriangle(3, 3, 2), 'Isosceles', '3,3,2 is a Isosceles triangle')
-
-    def testIsoscelesTriangleC(self):
-        self.assertEqual(classifyTriangle(5, 5, 4), 'Isosceles', '5,5,4 is a Isosceles triangle')
-
-    def testIsoscelesTriangleD(self):
-        self.assertEqual(classifyTriangle(7, 4, 7), 'Isosceles', '7,4,7 is a Isosceles triangle')
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
