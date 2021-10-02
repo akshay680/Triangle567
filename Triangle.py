@@ -26,6 +26,9 @@ def classifyTriangle(a,b,c):
       
       BEWARE: there may be a bug or two in this code
     """
+    a = int()
+    b = int()
+    c = int()
 
     # require that the input values be >= 0 and <= 200
     if a > 200 or b > 200 or c > 200:
