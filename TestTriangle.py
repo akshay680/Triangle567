@@ -84,6 +84,21 @@ class TestTriangles(unittest.TestCase):
     def testInvalidTriangleV(self):
         self.assertEqual(classifyTriangle(1, 2.02, 'c'), 'InvalidInput')
 
+    def testNotaTriangleW(self):
+        self.assertEqual(classifyTriangle(1, 1, 2), 'NotATriangle')
+
+    def testEquilateralTriangleX(self):
+        self.assertEqual(classifyTriangle(1, 1, 1), 'Equilateral')
+
+    def testRightTriangleY(self):
+        self.assertEqual(classifyTriangle(3, 4, 5), 'Right')
+
+    def testScaleneTriangleZ(self):
+        self.assertEqual(classifyTriangle(3, 4, 6), 'Scalene')
+
+    def testIsoscelesTriangleZ(self):
+        self.assertEqual(classifyTriangle(3, 3, 5), 'Isosceles')
+
 
 
 if __name__ == '__main__':
